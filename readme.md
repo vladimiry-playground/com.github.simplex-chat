@@ -1,0 +1,6 @@
+### Local build
+
+- Use `flatpak-builder --force-clean --repo=repo --user --install build-dir com.github.simplex-chat.metainfo.yaml`
+  command to "build & install" the app into the local `./repo` repository. The `./repo`, `./build-dir` and `./.flatpak-builder` directories have been added
+  to the `./.gitignore` file.
+- Then use `flatpak run com.github.simplex-chat` command to start the app.

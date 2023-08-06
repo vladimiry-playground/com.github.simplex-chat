@@ -1,0 +1,21 @@
+name: simplex-chat
+buildsystem: simple
+build-commands:
+  - ar x simplex-chat-setup.deb
+  - tar xf data.tar.zst -C ${FLATPAK_DEST} --strip-components=2 ./opt
+  - rm -f *.tar.* debian-binary *.deb
+  - mv ${FLATPAK_DEST}/simplex/bin/simplex ${FLATPAK_DEST}/simplex/bin/simplex-chat
+  - mv ${FLATPAK_DEST}/simplex/lib/app/simplex.cfg ${FLATPAK_DEST}/simplex/lib/app/simplex-chat.cfg
+  - mkdir --parents ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps
+  - mv ${FLATPAK_DEST}/simplex/lib/simplex.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
+  - find . -type f -name '*.desktop' -delete
+  - install -Dm644 /dev/null ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+  - desktop-file-edit --set-key="Exec" --set-value="${FLATPAK_DEST}/simplex/bin/simplex-chat %U" --set-name="Simplex Chat" --set-icon="${FLATPAK_ID}" --set-key="Type" --set-value="Application" --add-category="GTK;" ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+  - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
+sources:
+  - type: file
+    dest-filename: simplex-chat-setup.deb
+    url: https://github.com/simplex-chat/simplex-chat/releases/download/v5.3.0-beta.3/simplex-desktop-ubuntu-22_04-x86_64.deb
+    sha256: 37db75f2d8eb52629098e176fbebca2566305abe399674db80a64538d3446781
+  - type: file
+    path: com.github.simplex-chat.metainfo.xml

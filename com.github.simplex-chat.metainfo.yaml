@@ -1,0 +1,20 @@
+app-id: com.github.simplex-chat
+runtime: org.freedesktop.Platform
+runtime-version: "22.08"
+sdk: org.freedesktop.Sdk
+command: /app/simplex/bin/simplex-chat
+finish-args:
+  - --device=dri
+  - --filesystem=xdg-download
+  - --share=ipc
+  - --share=network
+  - --socket=pulseaudio
+  - --socket=x11
+  # required for notifications in various desktop environments
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
+modules:
+  - module-runtime-libjpeg.yaml # required in runtime by image preview feature
+  - module-runtime-libffi.yaml # required in runtime
+  - module-runtime-openssl.yaml # required in runtime
+  - module-simplex-chat.yaml

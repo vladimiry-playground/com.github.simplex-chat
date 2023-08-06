@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.github.simplex-chat</id>
+  <launchable type="desktop-id">com.github.simplex-chat.desktop</launchable>
+  <name>SimpleX / Simplex Chat</name>
+  <summary>The first messaging platform operating without user identifiers of any kind</summary>
+  <project_license>AGPL-3.0</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <url type="homepage">https://simplex.chat</url>
+  <url type="bugtracker">https://github.com/simplex-chat/simplex-chat/issues</url>
+  <description>
+    <p>Simplex Chat provides the best privacy by combining the advantages of P2P and federated networks</p>
+  </description>
+  <screenshots>
+    <screenshot>
+      <image type="source">https://avatars.githubusercontent.com/u/59927747</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.0">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-contacts">intense</content_attribute>
+    <content_attribute id="social-info">intense</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="5.3.0-beta.3" date="2023-08-05"/>
+  </releases>
+</component>
