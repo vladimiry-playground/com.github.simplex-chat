@@ -15,7 +15,7 @@ build-commands:
 sources:
   - type: file
     dest-filename: simplex-chat-setup.deb
-    url: https://github.com/simplex-chat/simplex-chat/releases/download/v5.3.0-beta.3/simplex-desktop-ubuntu-22_04-x86_64.deb
-    sha256: 37db75f2d8eb52629098e176fbebca2566305abe399674db80a64538d3446781
+    url: https://github.com/simplex-chat/simplex-chat/releases/download/v5.3.0-beta.4/simplex-desktop-ubuntu-22_04-x86_64.deb
+    sha256: 4c2162a9a46c6f4f96cb75ff2bdecac7abbd69e5c857f8e340067104741e73b7
   - type: file
     path: com.github.simplex-chat.metainfo.xml
