@@ -13,7 +13,7 @@ build-commands:
 sources:
   - type: file
     dest-filename: simplex-chat-setup.deb
-    url: https://github.com/simplex-chat/simplex-chat/releases/download/v5.3.0-beta.8/simplex-desktop-ubuntu-22_04-x86_64.deb
-    sha512: 77d7221682a318bce6fb6c7bc8593fa63264a8c2f0274c5edd714124e4233bb335d820afbda7bd0e68eda71f5a76b726a81abd8f84d48026f5f92e0a4e8ecc42
+    url: https://github.com/simplex-chat/simplex-chat/releases/download/v5.3.1/simplex-desktop-ubuntu-22_04-x86_64.deb
+    sha512: 5acacb6fb6d7e6e9feae14bc7a14e84d0ff4ad71992f5c9f1145c57fa68842d597da35a7c517539e6c818fda151e0edab5b96599fbabdd53921a651a7e34108d
   - type: file
     path: com.github.simplex-chat.metainfo.xml

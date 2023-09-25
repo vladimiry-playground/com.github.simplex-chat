@@ -14,7 +14,4 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
 modules:
-  - module-runtime-libjpeg.yaml # required in runtime by image preview feature
-  - module-runtime-libffi.yaml # required in runtime
-  - module-runtime-openssl.yaml # required in runtime
   - module-simplex-chat.yaml
